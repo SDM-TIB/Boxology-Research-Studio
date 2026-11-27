@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ee">
+  <title>Boxology Research Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
+  <meta name="description" content="Explore the literature, design neuro-symbolic systems, and follow the evidence with three AI assistants in Boxology Research Studio.">
+  <link rel="stylesheet" href="/style.css?v=welcome-1">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="login-screen" id="login-screen" hidden>
+    <div class="login-shell">
+      <header class="welcome-header">
+        <a class="welcome-brand" href="#welcome" aria-label="Boxology Studio home">
+          <img src="/images/tool4boxology-icon.png" alt="" width="44" height="44">
+          <span>Boxology <b>Studio</b><small>A WORKSPACE FOR RESEARCHERS</small></span>
+        </a>
+        <nav aria-label="Welcome navigation">
+          <a href="#studio-story">How it works</a>
+          <a href="/about.html">Meet the team</a>
+          <a class="welcome-nav-login" href="#profile-login">Sign in <span aria-hidden="true">&rarr;</span></a>
+        </nav>
+      </header>
+
+      <main id="welcome" tabindex="-1">
+        <div class="welcome-grid">
+          <section class="welcome-intro" aria-labelledby="welcome-title">
+            <span class="welcome-eyebrow"><span aria-hidden="true"></span> CONNECT IDEAS. BUILD UNDERSTANDING.</span>
+            <h1 id="welcome-title">Your next discovery<br> starts with a <em>connection.</em></h1>
+            <p class="welcome-lead">From a research question to a neuro-symbolic system. Explore the literature, shape your design, and follow the evidence &mdash; all in one studio.</p>
+            <div class="welcome-actions">
+              <a class="welcome-primary" href="#profile-login">Enter your workspace <span aria-hidden="true">&rarr;</span></a>
+              <a class="welcome-text-link" href="#studio-story">Discover the studio <span aria-hidden="true">&darr;</span></a>
+            </div>
+            <figure class="welcome-art">
+              <img src="/images/tool4boxology-banner.png" alt="Tool4Boxology: connected wings surrounding the Boxology design emblem" width="855" height="486" fetchpriority="high">
+              <figcaption><span aria-hidden="true"></span> Where evidence, design, and knowledge connect.</figcaption>
+            </figure>
+          </section>
+
+          <section class="login-card" id="profile-login" aria-labelledby="login-title" tabindex="-1">
+            <div class="login-card-top"><span class="welcome-eyebrow">YOUR RESEARCH, CONTINUED</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg></div>
+            <h2 id="login-title">Welcome to the studio.</h2>
+            <p class="login-sub">Choose your profile to open your workspace.</p>
+            <p class="login-field-label" id="profile-choice-label">Select a profile</p>
+        <div class="login-profiles" id="login-profiles" role="group" aria-label="Choose your profile">
+          <button type="button" class="login-profile" aria-pressed="false" data-username="vidal">
+            <img src="/images/people/Maria-Esther_Vidal.png" alt="">
+            <span class="login-profile-meta"><strong>Maria-Esther Vidal</strong><small>Professor</small></span><span class="profile-selection" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="login-profile" aria-pressed="false" data-username="disha">
+            <img src="/images/people/Disha_Purohit.jpg" alt="">
+            <span class="login-profile-meta"><strong>Disha Purohit</strong><small>Researcher</small></span><span class="profile-selection" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="login-profile" aria-pressed="false" data-username="mahsa">
+            <img src="/images/people/Mahsa_Forghani.png" alt="">
+            <span class="login-profile-meta"><strong>Mahsa Forghani</strong><small>Developer</small></span><span class="profile-selection" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="login-profile" aria-pressed="false" data-username="yashraj">
+            <img src="/images/people/Yashrajsinh_Chudasama.png" alt="">
+            <span class="login-profile-meta"><strong>Yashraj Chudasama</strong><small>Researcher</small></span><span class="profile-selection" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="login-profile" aria-pressed="false" data-username="enrique">
+            <img src="/images/people/Enrique_Iglesias.png" alt="">
+            <span class="login-profile-meta"><strong>Enrique Iglesias</strong><small>Researcher</small></span><span class="profile-selection" aria-hidden="true"></span>
+          </button>
+        </div>
+
+            <form id="login-form" class="login-form hidden">
+              <input id="login-username" name="username" autocomplete="username" class="sr-only" tabindex="-1" readonly aria-label="Selected username">
+              <label for="login-password">Password <span id="login-selected-name"></span></label>
+              <div class="login-password-wrap">
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" autocomplete="current-password" required aria-describedby="login-error">
+                <button type="button" id="login-toggle-password" aria-label="Show password" aria-pressed="false">Show</button>
+              </div>
+              <button type="submit" class="primary-button" id="login-submit">Sign in to workspace <span aria-hidden="true">&rarr;</span></button>
+            </form>
+            <p class="login-error hidden" id="login-error" role="alert"></p>
+            <p class="login-note">Your profile connects you to your saved projects<br class="login-note-break"> and research conversations.</p>
+          </section>
+        </div>
+
+        <section class="welcome-institutions" aria-label="Research institutions">
+          <p>RESEARCH CONNECTS US</p>
+      <div class="login-partners" aria-label="Partner institutions">
+        <img src="/images/tib.webp" alt="TIB — Leibniz Information Centre for Science and Technology">
+        <img src="/images/leibniz.png" alt="Leibniz Universität Hannover">
+        <span class="login-partner-sdm" aria-label="SDM">
+          <svg viewBox="0 0 60 60" aria-hidden="true">
+            <rect x="1" y="1" width="58" height="58" rx="12" fill="#8fe3c7"/>
+            <rect x="15" y="13" width="7" height="7" rx="1.5" fill="#0a2a3d"/>
+            <rect x="26" y="13" width="7" height="7" rx="1.5" fill="#0a2a3d"/>
+            <rect x="37" y="20" width="7" height="7" rx="1.5" fill="#0a2a3d"/>
+            <rect x="20" y="24" width="7" height="7" rx="1.5" fill="#0a2a3d"/>
+            <text x="30" y="47" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="13" fill="#0a2a3d">SDM</text>
+          </svg>
+        </span>
+      </div>
+
+        </section>
+
+        <section class="welcome-story" id="studio-story" aria-labelledby="studio-story-title" tabindex="-1">
+          <div class="welcome-section-heading">
+            <div><span class="welcome-eyebrow">WHAT IS BOXOLOGY STUDIO?</span><h2 id="studio-story-title">Three specialists.<br><em>One connected workspace.</em></h2></div>
+            <p>Move between evidence, architecture, and relationships. Each assistant brings a different perspective to the same research question.</p>
+          </div>
+          <div class="welcome-specialists">
+            <article class="welcome-specialist scholar-feature">
+              <span class="specialist-number">01 / EXPLORE</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15M6 8h3M6 12h3M15 8h3M15 12h3"/></svg>
+              <h3>Scholar</h3><span class="specialist-role">Your literature assistant</span>
+              <p>Find relevant research and explore answers grounded in papers, with sources you can inspect.</p>
+              <span class="specialist-output">Literature &rarr; Cited answers</span>
+            </article>
+            <article class="welcome-specialist boxologist-feature">
+              <span class="specialist-number">02 / DESIGN</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Zm0 10 9-5M12 12 3 7m9 5v10"/></svg>
+              <h3>Boxologist</h3><span class="specialist-role">Your design assistant</span>
+              <p>Discuss your architecture, connect neural and symbolic components, and create editable diagrams.</p>
+              <span class="specialist-output">Ideas &rarr; System diagrams</span>
+            </article>
+            <article class="welcome-specialist cartographer-feature">
+              <span class="specialist-number">03 / CONNECT</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><path d="m10.5 7.5-4 9m7-9 4 9M8 19h8"/></svg>
+              <h3>Cartographer</h3><span class="specialist-role">Your knowledge graph assistant</span>
+              <p>Query the knowledge graph, discover linked entities, and trace the relationships behind your design.</p>
+              <span class="specialist-output">Knowledge &rarr; Connected insights</span>
+            </article>
+          </div>
+          <figure class="studio-overview-figure">
+            <div class="studio-figure-heading"><span>THE STUDIO AT A GLANCE</span><a href="/images/studio-overview.png" target="_blank" rel="noopener">View full illustration <span aria-hidden="true">&rarr;</span><span class="sr-only"> (opens in a new tab)</span></a></div>
+            <img src="/images/studio-overview.png" alt="A researcher works with Scholar to explore cited literature, Boxologist to design a neuro-symbolic architecture, and Cartographer to query a knowledge graph. The researcher compares evidence and refines an editable Boxology diagram." width="1672" height="941" loading="lazy">
+            <figcaption>Explore the literature. Design the system. Follow the evidence.</figcaption>
+          </figure>
+          <div class="welcome-closing"><div><span class="welcome-eyebrow">BRING YOUR NEXT QUESTION</span><h2>Make room for discovery.</h2></div><a class="welcome-primary" href="#profile-login">Choose your profile <span aria-hidden="true">&rarr;</span></a></div>
+        </section>
+      </main>
+      <footer class="welcome-footer"><span>Boxology Studio <span aria-hidden="true">/</span> Built on Tool4Boxology</span><a href="/about.html">The people behind the studio <span aria-hidden="true">&rarr;</span></a></footer>
+    </div>
+  </div>
+
+  <div class="mobile-topbar">
+    <button type="button" id="mobile-menu-toggle" class="icon-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <a class="brand" href="#" data-view="overview"><img class="brand-mark" src="/images/tool4boxology-icon.png" alt=""><span>Boxology</span></a>
+    <span></span>
+  </div>
+  <div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
+
+  <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+    <a class="brand" href="#" data-view="overview"><img class="brand-mark" src="/images/tool4boxology-icon.png" alt=""><span>Boxology<span class="brand-sub">RESEARCH STUDIO</span></span></a>
+
+    <nav class="nav" aria-label="Sections">
+      <button type="button" class="nav-item active" data-view="overview">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        <span>Overview</span>
+      </button>
+      <button type="button" class="nav-item" data-view="assistants">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3a4 4 0 0 1 4 4v1a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4Z"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+        <span>AI assistants</span>
+      </button>
+      <button type="button" class="nav-item" data-view="projects">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/></svg>
+        <span>My projects</span>
+      </button>
+      <button type="button" class="nav-item" data-view="templates">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        <span>Templates</span>
+      </button>
+      <button type="button" class="nav-item" data-view="getting-started">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m12 2 2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.9l1.4-6.7-5-4.6 6.8-.7L12 2Z"/></svg>
+        <span>Getting started</span>
+      </button>
+      <a class="nav-item" href="/about.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+        <span>About the studio</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="profile">
+        <img class="profile-avatar" id="profile-avatar" alt="" hidden>
+        <span class="profile-avatar profile-avatar-fallback" id="profile-avatar-fallback" aria-hidden="true">R</span>
+        <div class="profile-meta"><strong id="profile-name">Researcher</strong><small id="profile-role">Boxology Studio</small></div>
+        <button type="button" id="profile-logout" class="icon-button hidden" title="Log out" aria-label="Log out">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="workspace">
+    <header class="topbar">
+      <div class="crumbs"><span class="crumb-root">Workspace</span><span class="breadcrumb">/ Overview</span></div>
+      <div class="topbar-actions">
+        <button type="button" class="ghost-button" data-view="getting-started">Help</button>
+        <button type="button" id="new-project-top" class="primary-button">+ New project</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+
+      <!-- ===================== OVERVIEW ===================== -->
+      <section class="view visible" id="view-overview" aria-label="Overview">
+        <div class="overview-hero">
+          <div>
+            <div class="eyebrow">WELCOME BACK</div>
+            <h1 class="serif">Your neuro-symbolic research workspace.</h1>
+            <p class="lead">Explore the literature, design an architecture, and follow the evidence — with three specialists working alongside you in one place.</p>
+            <div class="hero-actions">
+              <button type="button" id="new-project-hero" class="primary-button lg">+ New project</button>
+              <button type="button" class="ghost-button lg" data-view="getting-started">How it works</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-head"><h2>Choose an assistant</h2><button type="button" class="link-button" data-view="assistants">Open workspace →</button></div>
+        <div class="assistant-grid" id="overview-assistants"></div>
+
+        <div class="overview-cols">
+          <section class="panel">
+            <div class="panel-head"><h2>Recent projects</h2><button type="button" class="link-button" data-view="projects">View all →</button></div>
+            <div id="overview-projects"></div>
+          </section>
+        </div>
+
+        <section class="panel">
+          <div class="panel-head"><h2>Getting started</h2><button type="button" class="link-button" data-view="getting-started">Full guide →</button></div>
+          <ol class="steps-compact">
+            <li><span class="step-n">1</span><div><strong>Describe the system</strong><p>Tell Boxologist your goal, data, models, and constraints.</p></div></li>
+            <li><span class="step-n">2</span><div><strong>Discuss &amp; refine</strong><p>Iterate in plain language until the design fits.</p></div></li>
+            <li><span class="step-n">3</span><div><strong>Generate the diagram</strong><p>Produce a valid Tool4Boxology diagram.</p></div></li>
+            <li><span class="step-n">4</span><div><strong>Review &amp; export</strong><p>Preview, download, or open in Tool4Boxology.</p></div></li>
+          </ol>
+        </section>
+      </section>
+
+      <!-- ===================== AI ASSISTANTS (workspace) ===================== -->
+      <section class="view" id="chat-view" aria-label="AI assistants">
+        <div class="workspace-top">
+          <div class="workspace-top-left">
+            <button type="button" class="back-link" data-view="overview">← Dashboard</button>
+            <div class="project-title" id="project-title">Untitled session</div>
+          </div>
+          <div class="workspace-top-actions">
+            <button type="button" id="save-project" class="ghost-button">Save project</button>
+          </div>
+        </div>
+        <div class="agent-tabs" role="group" aria-label="Choose an assistant">
+          <button data-agent="scholar" class="agent-card active" aria-pressed="true"><span class="avatar scholar" aria-hidden="true"></span><span class="agent-card-text"><strong>Scholar</strong><small>Explore papers</small></span><span class="selection-dot"></span></button>
+          <button data-agent="anvil" class="agent-card" aria-pressed="false"><span class="avatar anvil" aria-hidden="true"></span><span class="agent-card-text"><strong>Boxologist</strong><small>Design a system</small></span><span class="selection-dot"></span></button>
+          <button data-agent="cartographer" class="agent-card" aria-pressed="false"><span class="avatar cartographer" aria-hidden="true"></span><span class="agent-card-text"><strong>Cartographer</strong><small>Explore a graph</small></span><span class="selection-dot"></span></button>
+        </div>
+        <section class="conversation-card">
+          <div class="conversation-header">
+            <div class="agent-heading"><span id="agent-avatar" class="avatar scholar" aria-hidden="true"></span><div><h2 id="agent-name">Scholar</h2><p id="agent-desc">Explore and discuss research papers, with answers grounded in sources.</p></div></div>
+            <div class="conversation-actions">
+              <button type="button" id="save-output" class="secondary-button hidden" title="Download this conversation's answer and sources (Cartographer also saves the graph)">Save output ↓</button>
+              <button id="start-call" class="secondary-button">Talk to Scholar</button>
+            </div>
+          </div>
+          <p id="call-status" class="call-status hidden" role="status" aria-live="polite"></p>
+          <div class="mobile-tabs" role="tablist" aria-label="Chat or output">
+            <button type="button" class="mobile-tab active" id="mtab-chat" role="tab" aria-selected="true">Chat</button>
+            <button type="button" class="mobile-tab" id="mtab-output" role="tab" aria-selected="false">Output</button>
+          </div>
+          <div class="chat-with-graph" id="chat-with-graph">
+            <div class="chat-main" id="chat-main-pane">
+              <div id="messages" role="log" aria-label="Conversation"></div>
+              <div id="anvil-model-picker" class="anvil-model-picker hidden">
+                <label for="anvil-model">Boxologist model</label>
+                <select id="anvil-model">
+                  <option value="cot2" selected>CoT2 — higher accuracy &amp; recall</option>
+                  <option value="cot3">CoT3 — higher precision, narrower coverage</option>
+                </select>
+                <span id="anvil-status" class="anvil-status starting" role="status" aria-live="polite"
+                      title="The Boxologist runs on a GPU that sleeps when idle. First prompt after a pause wakes it (~2 min).">
+                  <span class="anvil-status-dot" aria-hidden="true"></span>
+                  <span class="anvil-status-label">Checking GPU…</span>
+                </span>
+              </div>
+              <div id="composer"><label for="input" class="sr-only">Message your assistant</label><input id="input" type="text" placeholder="Ask Scholar about your papers…" autocomplete="off"><button id="send" class="primary-button">Send ↑</button></div>
+              <div class="composer-note">AI can make mistakes. Review sources and generated diagrams.</div>
+            </div>
+            <div class="panel-resizer" id="panel-resizer" role="separator" aria-orientation="vertical" aria-label="Resize panels" tabindex="0"></div>
+            <aside class="graph-panel" id="graph-panel" style="display:none">
+              <div class="graph-heading">
+                <button type="button" id="graph-maximize-toggle" class="panel-expand-toggle" aria-label="Maximize graph view" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:13px;height:13px"><path d="M8 3H3v5"/><path d="M16 3h5v5"/><path d="M8 21H3v-5"/><path d="M16 21h5v-5"/></svg></button>
+                <button type="button" id="graph-expand-toggle" class="panel-expand-toggle" aria-label="Expand graph view" aria-pressed="false">⤢</button>
+                <button type="button" id="graph-maximize-close" class="back-link graph-maximize-close hidden" aria-label="Close maximized view">Close ×</button>
+                <span class="eyebrow">FOLLOW THE EVIDENCE</span><h3>Graph exploration<span id="graph-cited" class="graph-cited hidden"></span></h3><p>Click a node to expand its neighbors. Drag to pan, scroll to zoom.</p>
+              </div>
+              <div class="graph-view-tabs" role="tablist" aria-label="Graph or query view">
+                <button type="button" id="graph-tab-explore" class="graph-view-tab active" role="tab" aria-selected="true">Explore</button>
+                <button type="button" id="graph-tab-query" class="graph-view-tab" role="tab" aria-selected="false">Query</button>
+              </div>
+              <div class="graph-search" role="search">
+                <input type="search" id="graph-search-input" placeholder="Search nodes… (Ctrl+K)" autocomplete="off" aria-label="Search the knowledge graph">
+                <div id="graph-search-results" class="graph-search-results hidden" role="listbox"></div>
+              </div>
+              <div class="graph-breadcrumbs hidden" id="graph-breadcrumbs">
+                <button type="button" id="graph-nav-back" class="graph-nav-btn" aria-label="Back" disabled>‹</button>
+                <button type="button" id="graph-nav-forward" class="graph-nav-btn" aria-label="Forward" disabled>›</button>
+                <div class="graph-breadcrumb-trail" id="graph-breadcrumb-trail"></div>
+              </div>
+              <div id="graph-explore-view" class="graph-explore-view">
+                <div class="graph-toolbar">
+                  <div class="graph-legend" aria-hidden="true">
+                    <span class="legend-item"><i class="legend-dot rule"></i>Structural rule</span>
+                    <span class="legend-item"><i class="legend-dot boxology"></i>Boxology diagram</span>
+                    <span class="legend-item"><i class="legend-dot pattern"></i>Design pattern</span>
+                    <span class="legend-item"><i class="legend-dot entity"></i>Component</span>
+                  </div>
+                  <button type="button" id="graph-download-png" class="graph-filter" title="Download the current graph view as a PNG image">PNG ↓</button>
+                </div>
+                <div class="stepper-card inline hidden" id="chat-stepper-card">
+                  <div class="stepper-title">Linking your words to the graph</div>
+                  <p class="stepper-question" id="chat-stepper-question"></p>
+                  <div class="stepper-track">
+                    <span class="stepper-step" data-step="LINK">LINK</span>
+                    <span class="stepper-step" data-step="READ">READ</span>
+                    <span class="stepper-step" data-step="RANK">RANK</span>
+                    <span class="stepper-step" data-step="WALK">WALK</span>
+                    <span class="stepper-step" data-step="SELECT">SELECT</span>
+                  </div>
+                </div>
+                <p id="graph-walk-status" class="walk-status hidden"></p>
+                <div class="graph-canvas-wrap">
+                  <div id="graph-canvas" aria-label="Knowledge graph results"></div>
+                  <p id="graph-empty" class="graph-empty">Ask a question to start mapping the graph.</p>
+                  <div id="graph-tip-bubble" class="graph-tip-bubble">Zoom in — the graph holds more than the path</div>
+                  <div id="graph-tooltip" class="graph-tooltip hidden" role="tooltip"></div>
+                </div>
+                <div id="graph-detail" class="graph-detail hidden">
+                  <button type="button" id="graph-detail-close" class="graph-detail-close" aria-label="Close node details">×</button>
+                  <div id="graph-detail-body"></div>
+                </div>
+              </div>
+              <div id="graph-query-view" class="graph-query-view hidden">
+                <label for="query-editor" class="sr-only">SPARQL query</label>
+                <textarea id="query-editor" class="query-editor" spellcheck="false" rows="6"
+                  placeholder="SELECT ?s ?label WHERE { ?s a &lt;http://tool4boxology.org/DesignPattern&gt; ; &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; ?label } LIMIT 25"></textarea>
+                <div class="query-toolbar">
+                  <button type="button" id="query-run" class="primary-button">Run ▸ <small>Ctrl+Enter</small></button>
+                  <span id="query-meta" class="query-meta"></span>
+                </div>
+                <p id="query-error" class="query-error hidden"></p>
+                <div class="query-results-wrap">
+                  <table id="query-results-table" class="results-table hidden"><thead></thead><tbody></tbody></table>
+                  <p id="query-results-empty" class="graph-empty-inline">Run a query to see results here.</p>
+                </div>
+                <div class="query-actions">
+                  <button type="button" id="query-show-on-graph" class="graph-filter" disabled>Show on graph →</button>
+                  <button type="button" id="query-export-csv" class="graph-filter" disabled>Export CSV</button>
+                  <button type="button" id="query-export-json" class="graph-filter" disabled>Export JSON</button>
+                </div>
+                <div class="query-history-wrap">
+                  <p class="graph-detail-hint">Saved examples</p>
+                  <div id="query-saved-examples" class="query-history-list"></div>
+                  <p class="graph-detail-hint">History (this session)</p>
+                  <div id="query-history" class="query-history-list"></div>
+                </div>
+              </div>
+            </aside>
+            <aside class="graph-panel boxology-panel" id="boxology-panel" style="display:none">
+              <div class="graph-heading">
+                <button type="button" id="boxology-maximize-toggle" class="panel-expand-toggle" aria-label="Maximize diagram view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:13px;height:13px"><path d="M8 3H3v5"/><path d="M16 3h5v5"/><path d="M8 21H3v-5"/><path d="M16 21h5v-5"/></svg></button>
+                <button type="button" id="boxology-expand-toggle" class="panel-expand-toggle" aria-label="Expand diagram view" aria-pressed="false">⤢</button>
+                <span class="eyebrow">WATCH IT GET BUILT</span><h3>Diagram preview</h3><p>Clusters appear here as Boxologist designs your system.</p>
+              </div>
+              <div class="graph-canvas-wrap">
+                <svg id="boxology-canvas" aria-label="Generated Boxology diagram"></svg>
+                <p id="boxology-empty" class="graph-empty">Ask for a design, then confirm it to generate the diagram.</p>
+              </div>
+              <div id="boxology-result" class="boxology-result hidden">
+                <p id="boxology-result-status"></p>
+                <div class="actions">
+                  <a id="boxology-download" download class="primary-button">Download .boxology</a>
+                  <a id="boxology-download-semantic" download>Download semantic JSON</a>
+                  <a href="#" id="boxology-download-png">Download PNG ↓</a>
+                  <a id="boxology-open-editor" href="https://tool4boxology.service.tib.eu/" target="_blank" rel="noopener noreferrer">Open in Tool4Boxology ↗</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </section>
+
+      <!-- ===================== MY PROJECTS ===================== -->
+      <section class="view" id="view-projects" aria-label="My projects">
+        <div class="section-head"><h1 class="serif">My projects</h1><button type="button" id="new-project-projects" class="primary-button">+ New project</button></div>
+        <p class="view-intro">Sessions you save are stored <strong>in this browser</strong> on your device. <span class="prototype-tag">Local prototype</span></p>
+        <div class="projects-search">
+          <label for="project-search" class="sr-only">Search projects</label>
+          <input type="search" id="project-search" placeholder="Search projects by title or assistant…" autocomplete="off">
+        </div>
+        <div id="projects-list" class="projects-list"></div>
+      </section>
+
+      <!-- ===================== TEMPLATES ===================== -->
+      <section class="view" id="view-templates" aria-label="Templates">
+        <div class="section-head"><h1 class="serif">Templates</h1></div>
+        <p class="view-intro">Editable starting prompts for common research scenarios. Pick one, tweak it, and send it to an assistant.</p>
+        <div id="templates-list" class="templates-list"></div>
+      </section>
+
+      <!-- ===================== GETTING STARTED ===================== -->
+      <section class="view" id="view-getting-started" aria-label="Getting started">
+        <div class="section-head"><h1 class="serif">Getting started</h1></div>
+        <p class="view-intro">Boxology Studio pairs three AI assistants with a live knowledge graph and an in-app diagram preview. Here's how a typical project flows.</p>
+
+        <div class="workflow">
+          <div class="workflow-step"><span class="workflow-n">1</span><h3>Describe the system</h3><p>Open <strong>Boxologist</strong> and describe your goal, the data you have, the models you need, and any rules or constraints.</p></div>
+          <div class="workflow-arrow" aria-hidden="true">→</div>
+          <div class="workflow-step"><span class="workflow-n">2</span><h3>Discuss &amp; refine</h3><p>Talk through the design in plain language. Boxologist asks clarifying questions and proposes building blocks.</p></div>
+          <div class="workflow-arrow" aria-hidden="true">→</div>
+          <div class="workflow-step"><span class="workflow-n">3</span><h3>Generate the diagram</h3><p>Ask it to build the diagram. A valid Tool4Boxology <code>.boxology</code> file is produced and previewed live.</p></div>
+          <div class="workflow-arrow" aria-hidden="true">→</div>
+          <div class="workflow-step"><span class="workflow-n">4</span><h3>Review &amp; export</h3><p>Zoom the preview, download the diagram or semantic JSON, or open it in Tool4Boxology.</p></div>
+        </div>
+
+        <div class="guide-grid">
+          <section class="panel">
+            <h2>Three specialists</h2>
+            <ul class="guide-assistants" id="guide-assistants"></ul>
+          </section>
+          <section class="panel">
+            <h2>A good first prompt</h2>
+            <p class="guide-tip">Describe your goal, the data you have, the models you need, and any rules or constraints.</p>
+            <div class="example-prompt">
+              <p>“We have images from a warehouse where workers first label boxes and shelves. Then we train a model to recognize where every box is. After that, a robot uses the detected boxes together with warehouse storage rules to decide where to put new items.”</p>
+              <button type="button" class="ghost-button" id="try-example-prompt">Try this with Boxologist →</button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- ===================== DIAGRAM EDITOR (reached contextually) ===================== -->
+      <section class="view" id="design-view" aria-label="Diagram editor">
+        <div class="editor-bar">
+          <div class="editor-bar-title"><button type="button" id="editor-back" class="back-link">← AI assistants</button><h2>Diagram editor</h2></div>
+          <div class="editor-bar-actions">
+            <button type="button" id="editor-undo" class="graph-filter" disabled title="Undo (Ctrl+Z)">↶ Undo</button>
+            <button type="button" id="editor-redo" class="graph-filter" disabled title="Redo (Ctrl+Y)">↷ Redo</button>
+            <button type="button" id="editor-rearrange" class="graph-filter">Re-arrange</button>
+            <a id="editor-download" download class="primary-button">Download .boxology</a>
+            <a href="https://tool4boxology.service.tib.eu/" target="_blank" rel="noopener noreferrer">Open in Tool4Boxology ↗</a>
+          </div>
+        </div>
+        <div class="editor-body">
+          <aside class="editor-palette" id="editor-palette" aria-label="Shape palette"></aside>
+          <div class="editor-canvas-wrap">
+            <svg id="editor-canvas" aria-label="Diagram editor canvas"></svg>
+            <p id="editor-empty" class="graph-empty">Generate a diagram with Boxologist, then open it here to rearrange it.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <dialog id="boxology-maximize-modal" class="maximize-modal" aria-labelledby="boxology-maximize-title">
+    <div class="maximize-toolbar">
+      <h2 id="boxology-maximize-title">Diagram preview</h2>
+      <div class="maximize-actions">
+        <div class="zoom-controls" role="group" aria-label="Zoom controls">
+          <button type="button" id="boxology-zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
+          <button type="button" id="boxology-zoom-reset" aria-label="Fit diagram to view" title="Fit to view">Fit</button>
+          <button type="button" id="boxology-zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
+        </div>
+        <a id="boxology-maximize-download" download class="primary-button hidden">Download .boxology</a>
+        <button type="button" id="boxology-maximize-close" class="back-link" aria-label="Close maximized view">Close ×</button>
+      </div>
+    </div>
+    <div class="maximize-canvas-wrap">
+      <svg id="boxology-maximize-canvas" aria-label="Maximized Boxology diagram"></svg>
+      <p class="maximize-hint" aria-hidden="true">Scroll to zoom · drag to pan</p>
+    </div>
+  </dialog>
+
+  <dialog id="voice-modal" aria-labelledby="voice-title">
+    <div class="video-toolbar"><div><span class="eyebrow">VIDEO CALL</span><h2 id="voice-title">Talk with Scholar</h2><span class="call-timer hidden" id="call-timer">00:00</span></div><p id="call-modal-status" class="call-status hidden" role="status" aria-live="polite"></p><button type="button" id="save-desk-output" class="secondary-button toolbar-save" title="Download this call's results — sources / query results / graph (plus the live transcript has its own Save)">Save output ↓</button></div>
+    <div class="video-body">
+      <div class="call-main">
+        <div class="desk-area" id="desk-area">
+          <div class="stepper-card hidden" id="stepper-card">
+            <div class="stepper-title">Linking your words to the graph</div>
+            <p class="stepper-question" id="stepper-question"></p>
+            <div class="stepper-track">
+              <span class="stepper-step" data-step="LINK">LINK</span>
+              <span class="stepper-step" data-step="READ">READ</span>
+              <span class="stepper-step" data-step="RANK">RANK</span>
+              <span class="stepper-step" data-step="WALK">WALK</span>
+              <span class="stepper-step" data-step="SELECT">SELECT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="video-side" id="video-side">
+        <div class="call-video-wrap">
+          <video id="remote-video" autoplay playsinline></video>
+          <audio id="remote-audio" autoplay></audio>
+          <video id="local-video" autoplay playsinline muted class="call-pip"></video>
+          <div class="debug-hud hidden" id="debug-hud">
+            <div class="debug-hud-name" id="debug-hud-name">clef-flash</div>
+            <div class="debug-hud-line" id="debug-hud-line"></div>
+          </div>
+        </div>
+        <div class="video-transcript-wrap" id="transcript-wrap">
+          <div class="video-side-heading"><span class="eyebrow">LIVE TRANSCRIPT</span><a id="transcript-download" download class="transcript-download-link hidden">Save ↓</a></div>
+          <div id="call-transcript" role="log" aria-live="polite" aria-label="Live voice transcript"><p class="transcript-empty">Your conversation will appear here as you talk.</p></div>
+        </div>
+      </aside>
+    </div>
+    <nav class="call-controls">
+      <button type="button" id="call-mute" aria-pressed="false"><span class="icon-slot" aria-hidden="true"></span><span class="btn-label">Mute</span></button>
+      <button type="button" id="call-video-toggle" aria-pressed="false"><span class="icon-slot" aria-hidden="true"></span><span class="btn-label">Stop Video</span></button>
+      <button type="button" id="call-chat-toggle" aria-pressed="true"><span class="icon-slot" aria-hidden="true"></span><span class="btn-label">Chat</span></button>
+      <button type="button" id="close-voice" class="end-button"><span class="icon-slot" aria-hidden="true"></span><span class="btn-label">End</span></button>
+    </nav>
+  </dialog>
+
+  <dialog id="cite-modal" class="cite-modal" aria-labelledby="cite-modal-title">
+    <button type="button" id="cite-modal-close" class="cite-modal-close" aria-label="Close">×</button>
+    <span id="cite-modal-badge" class="cite-modal-badge"></span>
+
+    <div class="cite-field cite-field-title">
+      <h3 id="cite-modal-title"></h3>
+      <div class="cite-field-actions">
+        <button type="button" class="cite-action-btn" data-copy="title">Copy</button>
+        <a class="cite-action-btn" data-search="title" target="_blank" rel="noopener">Google ↗</a>
+      </div>
+    </div>
+
+    <p id="cite-modal-authors" class="cite-modal-authors hidden"></p>
+    <p id="cite-modal-meta" class="cite-modal-meta"></p>
+
+    <div id="cite-modal-doi-field" class="cite-field cite-field-doi hidden">
+      <span class="cite-field-label">DOI</span>
+      <a id="cite-modal-doi-link" class="cite-modal-doi" target="_blank" rel="noopener"></a>
+      <div class="cite-field-actions">
+        <button type="button" class="cite-action-btn" data-copy="doi">Copy</button>
+        <a class="cite-action-btn" data-search="doi" target="_blank" rel="noopener">Google ↗</a>
+      </div>
+    </div>
+
+    <p class="cite-modal-label">Why this was cited</p>
+    <div id="cite-modal-terms" class="cite-modal-terms hidden"></div>
+    <p id="cite-modal-snippet" class="cite-modal-snippet"></p>
+
+    <div id="cite-modal-toast" class="cite-modal-toast" role="status" aria-live="polite"></div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/force-graph@1.52.0/dist/force-graph.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@daily-co/daily-js@0.93.0/dist/daily.js"></script>
+  <script src="/app.js?v=welcome-1"></script>
+  <script src="/editor.js?v=forest-8"></script>
+  <script src="/desk.js?v=forest-8"></script>
+  <script src="/save_output.js?v=forest-8"></script>
+</body>
+</html>
