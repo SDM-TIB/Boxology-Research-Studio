@@ -1,3 +1,7 @@
+## Research workflow
+
+![Boxology Studio research workflow](images/Boxology%20Studio%20Research%20Workflow.png)
+
 # Boxology Research Studio
 
 A web app that helps engineers design and validate **neuro-symbolic ("Boxology") systems** —
